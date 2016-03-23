@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="binary-search-tree.js"></script>
+    <title></title>
+    <style>
+        #treeRoot{
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            left: 38%;
+            top: 25%;
+            background: rgba(219, 211, 196, 0.38);
+        }
+        .node{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: dodgerblue;
+            border-radius: 30px;
+            text-align: center;
+            left: 47%;
+            top: 5%
+        }
+
+        .col_1 {
+            margin-top: 6%;
+        }
+
+        .pos_left {
+            margin-left: -10%;
+        }
+
+        .pos_right {
+            margin-left: 10%;
+        }
+
+
+
+    </style>
+</head>
+<script>
+   $(function() {
+       var submitAddToTree = $("#submitAddToTree");
+       var tree = new BinarySearchTree($("#treeRoot"));
+       submitAddToTree.click(function() {
+           tree.add($("#addToTree").val());
+       });
+
+   });
+       /*function add(addingValue){
+        window.tree.col = 0;
+        tree.add(addingValue);
+        var value = tree.toArray();
+       var root = tree._root.value;
+        tree._root.depth = 0;
+
+        //buildUi(tree._root);
+
+
+    }})
+*/
+
+
+
+
+
+</script>
+<body>
+<label>Add To tree <input id="addToTree" placeholder="setValue"> <button id="submitAddToTree">Add</button></label>
+<div id="result"> </div>
+<div id="treeRoot"> </div>
+<script>
+
+
+   // document.getElementById("treeRoot").innerText = value;
+</script>
+</body>
+</html>
